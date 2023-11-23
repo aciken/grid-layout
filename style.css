@@ -222,9 +222,9 @@ cursor: pointer;
 .all-cards{
     grid-area: 2/1/3/2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
     grid-template-rows: repeat(3, 200px);
-    row-gap: 20px;
+    row-gap: 70px;
 }
 
 .main-part svg{
@@ -233,9 +233,10 @@ cursor: pointer;
 }
 
 .card{
+    cursor:default;
     padding: 20px 60px 0 20px;
     width: 80%;
-    height: 200px;
+    height: 250px;
     background-color: white;
     border-radius: 10px;
     border-left: 5px solid rgb(255, 181, 111);
@@ -265,6 +266,11 @@ cursor: pointer;
 
 .card-buttons svg{
     cursor: pointer;
+    transition: .3s;
+}
+
+.card-buttons svg:hover{
+    scale: 110%;
 }
 
 .right-part{
@@ -277,16 +283,22 @@ p.an-text{
 }
 
 .right-part .an-card{
+    cursor: pointer;
     margin-top: 5px;
     font-size: .8rem;
     width: 80%;
     background-color: white;
     padding: 30px;
     border-radius: 5px;
+    transition: .3s;
+}
+
+.right-part .an-card:hover{
+    scale: 105%;
 }
 
 .right-part .an-card p{
-color: rgb(70, 70, 70);
+    color:rgba(0, 0, 0, .6);
 }
 
 .right-part .an-card h1{
@@ -296,4 +308,59 @@ color: rgb(70, 70, 70);
 
 .right-part .an-card hr{
     margin: 10px 0;
+}
+
+.bottom-right-card{
+    cursor: default;
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.trending-card{
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    gap: 10px;
+    transition: .3s ;
+
+}
+.trending-card:hover{
+    font-size: 1.1rem;
+}
+
+.bio{
+    color:rgba(0, 0, 0, .6);
+}
+
+.profile-photo{
+    width: 50px;
+    height: 50px;
+}
+
+.trending-text{
+
+    font-size: 1.3rem;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1920px) {
+.container{
+    height: 150vh;
+}
+
+.top-part{
+    height: 200px;
+    padding: 0;
+    margin: 0;
+}
 }
